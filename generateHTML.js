@@ -139,7 +139,6 @@ function generateHTML(data) {
          padding-left: 100px;
          padding-right: 100px;
          }
-
          .row {
            display: flex;
            flex-wrap: wrap;
@@ -147,7 +146,6 @@ function generateHTML(data) {
            margin-top: 20px;
            margin-bottom: 20px;
          }
-
          .card {
            padding: 20px;
            border-radius: 6px;
@@ -160,13 +158,11 @@ function generateHTML(data) {
          flex: 1;
          text-align: center;
          }
-
          a, a:hover {
          text-decoration: none;
          color: inherit;
          font-weight: bold;
          }
-
          @media print { 
           body { 
             zoom: .75; 
@@ -175,8 +171,7 @@ function generateHTML(data) {
       </style>
       </head>
       <body>
-
-
+      <img src=${data.avatar_url}>
       <h1>
       Hello my name is: ${data.name}
   </h1>
@@ -184,8 +179,6 @@ function generateHTML(data) {
   <h3>
       I am located: ${data.location}
   </h3>
-
-
       </body>
       </html>      
       `
