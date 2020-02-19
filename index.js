@@ -54,37 +54,35 @@ async function initES6() {
     }
 }
 
-function init() {
-    inquirer
-        .prompt({
-            message: 'Enter your Github username',
-            name: 'username'
-        })
-        .then(({ username }) => {
-            const url = `https://api.github.com/users/${username}/repos?per_page=100`;
+// function init() {
+//     inquirer
+//         .prompt({
+//             message: 'Enter your Github username',
+//             name: 'username'
+//         })
+//         .then(({ username }) => {
+//             const url = `https://api.github.com/users/${username}/repos?per_page=100`;
 
-            axios.get(url)
-                .then((res) => {
-                    const repoNames = res.data.map(repo => repo.name);
+//             axios.get(url)
+//                 .then((res) => {
+//                     const repoNames = res.data.map(repo => repo.name);
 
-                    writeToFile('./index-test.js', repoNames)
-                        .then(function (res) {
-                            console.log(res)
-                        })
-                        .catch(function (err) {
-                            console.log(err)
-                        })
-                })
-                .catch(function (err) {
-                    console.log(err)
-                })
-        })
-        .catch(function (err) {
-            console.log(err)
-        });
-}
+//                     writeToFile('./index-test.js', repoNames)
+//                         .then(function (res) {
+//                             console.log(res)
+//                         })
+//                         .catch(function (err) {
+//                             console.log(err)
+//                         })
+//                 })
+//                 .catch(function (err) {
+//                     console.log(err)
+//                 })
+//         })
+//         .catch(function (err) {
+//             console.log(err)
+//         });
+// }
 
 initES6();
-
-
 
