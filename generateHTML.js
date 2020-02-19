@@ -179,6 +179,17 @@ function generateHTML(data) {
   <h3>
       I am located: ${data.location}
   </h3>
+  <h3>
+  My GitHub profile is: https://github.com/${data.login}
+</h3>
+<ul>
+<li>User blog: ${data.blog}</li>
+<li>User bio: ${data.bio}</li>
+<li>Number of public repositories: ${data.public_repos}</li>
+<li>Number of followers: ${data.followers}</li>
+<li>Number of users following: ${data.following}</li>
+
+</ul>
       </body>
       </html>      
       `
